@@ -42,16 +42,16 @@ async fn main(spawner: Spawner) {
 
         peripheral_config.rcc.ahb_pre = AHBPrescaler::DIV1;
         peripheral_config.rcc.apb1_pre = APBPrescaler::DIV2;
-        peripheral_config.rcc.apb2_pre = APBPrescaler::DIV2;
+        peripheral_config.rcc.apb2_pre = APBPrescaler::DIV1;
 
         peripheral_config.rcc.mux.clk48sel = mux::Clk48sel::PLL1_Q;
 
         peripheral_config.rcc.pll_src = PllSource::HSE;
         peripheral_config.rcc.pll = Some(Pll {
-            prediv: PllPreDiv::DIV16,
-            mul: PllMul::MUL250,
-            divp: Some(PllPDiv::DIV6),
-            divq: Some(PllQDiv::DIV8),
+            prediv: PllPreDiv::DIV25,
+            mul: PllMul::MUL192,
+            divp: Some(PllPDiv::DIV4),
+            divq: Some(PllQDiv::DIV4),
             divr: None,
         });
 
