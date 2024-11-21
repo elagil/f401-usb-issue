@@ -1,0 +1,6 @@
+{
+    // Comment out the project to analyze.
+    "rust-analyzer.linkedProjects": [
+        "firmware/Cargo.toml",
+    ]
+}
